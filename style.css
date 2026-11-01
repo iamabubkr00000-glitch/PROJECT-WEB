@@ -1,0 +1,94 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+body { background: #f7f8fc; color: #172033; }
+
+.navbar {
+  height: 72px;
+  padding: 0 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+  border-bottom: 1px solid #e9ebf2;
+}
+.logo { font-size: 24px; font-weight: 800; color: #172033; text-decoration: none; }
+.logo span { color: #6657d9; }
+nav { display: flex; gap: 28px; }
+nav a { color: #555e70; text-decoration: none; font-size: 14px; }
+nav a:hover { color: #6657d9; }
+
+.hero {
+  min-height: 390px;
+  padding: 65px 10%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(115deg, #eeedff, #f8f8ff 65%, #e5f5f4);
+}
+.eyebrow { color: #6657d9; font-size: 11px; font-weight: bold; letter-spacing: 2px; margin-bottom: 14px; }
+.hero h1 { font-size: clamp(36px, 5vw, 54px); line-height: 1.12; margin-bottom: 17px; }
+.hero h1 span { color: #6657d9; }
+.hero-text > p:not(.eyebrow) { color: #667085; line-height: 1.7; margin-bottom: 25px; }
+.primary-btn {
+  display: inline-block; background: #6657d9; color: white; padding: 13px 21px;
+  border-radius: 8px; text-decoration: none; font-size: 14px; font-weight: bold;
+}
+.primary-btn:hover { background: #5142c2; }
+.hero-art { width: 220px; height: 220px; border-radius: 50%; background: #dcd8ff; display: grid; place-items: center; position: relative; margin-right: 7%; }
+.circle { width: 150px; height: 150px; border-radius: 50%; background: white; display: grid; place-items: center; font-size: 70px; box-shadow: 0 12px 35px #7568c52b; }
+.small-note { position: absolute; right: -45px; bottom: 0; background: white; padding: 13px 17px; border-radius: 10px; font-size: 12px; line-height: 1.5; box-shadow: 0 8px 25px #20204015; }
+
+.section { padding: 65px 10%; }
+.section-heading { display: flex; align-items: end; justify-content: space-between; margin-bottom: 25px; }
+h2 { font-size: 31px; margin-bottom: 9px; }
+.muted { color: #788195; font-size: 14px; }
+.count { background: #eceaff; color: #5b4dc8; padding: 9px 13px; border-radius: 20px; font-size: 12px; font-weight: bold; }
+.search-area { display: flex; gap: 12px; margin-bottom: 25px; }
+.search-area input, .search-area select {
+  background: white; border: 1px solid #e1e4ed; border-radius: 8px; padding: 13px 14px;
+  font-size: 14px; outline: none;
+}
+.search-area input { flex: 1; }
+.search-area input:focus, .search-area select:focus { border-color: #8174e7; }
+.scholarship-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 17px; }
+.scholarship-card {
+  background: white; padding: 22px; border: 1px solid #eceef4; border-radius: 12px;
+  min-height: 150px; display: flex; flex-direction: column; align-items: flex-start;
+  transition: transform .2s, box-shadow .2s;
+}
+.scholarship-card:hover { transform: translateY(-4px); box-shadow: 0 12px 28px #2020400d; }
+.card-icon { width: 38px; height: 38px; display: grid; place-items: center; background: #f0efff; border-radius: 10px; margin-bottom: 15px; }
+.scholarship-card h3 { font-size: 16px; line-height: 1.45; margin-bottom: 15px; }
+.tag { margin-top: auto; font-size: 11px; color: #6657d9; background: #f0efff; padding: 6px 9px; border-radius: 20px; }
+.scholarship-card a { color: #6657d9; font-size: 12px; font-weight: bold; text-decoration: none; margin-top: 13px; }
+.empty-message { display: none; color: #788195; text-align: center; padding: 35px; }
+.notice { margin-top: 25px; color: #858da0; font-size: 12px; line-height: 1.6; }
+
+.about { padding: 45px 10%; background: #eeedff; display: flex; gap: 60px; align-items: center; }
+.about > div, .about > p { flex: 1; }
+.about > p { color: #687187; line-height: 1.8; font-size: 14px; }
+footer { text-align: center; padding: 22px; color: #8991a2; background: white; font-size: 12px; }
+
+@media (max-width: 800px) {
+  .scholarship-grid { grid-template-columns: repeat(2, 1fr); }
+  .hero-art { margin-right: 3%; transform: scale(.85); }
+}
+@media (max-width: 600px) {
+  .navbar { padding: 0 5%; }
+  nav { gap: 13px; }
+  nav a { font-size: 12px; }
+  .hero { padding: 55px 7%; }
+  .hero-art { display: none; }
+  .section { padding: 48px 7%; }
+  .section-heading { align-items: flex-start; gap: 12px; flex-direction: column; }
+  .search-area { flex-direction: column; }
+  .scholarship-grid { grid-template-columns: 1fr; }
+  .about { padding: 40px 7%; display: block; }
+  .about > p { margin-top: 15px; }
+}

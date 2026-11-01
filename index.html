@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ScholarTrack | UG Scholarships</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="navbar">
+    <a class="logo" href="#">Scholar<span>Track</span></a>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#scholarships">Scholarships</a>
+      <a href="#about">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-text">
+        <p class="eyebrow">YOUR FUTURE, FUNDED</p>
+        <h1>Find scholarships.<br><span>Focus on your future.</span></h1>
+        <p>Explore scholarship opportunities for undergraduate students in India.</p>
+        <a class="primary-btn" href="#scholarships">Explore Scholarships</a>
+      </div>
+      <div class="hero-art">
+        <div class="circle">🎓</div>
+        <div class="small-note">Opportunities<br>start here</div>
+      </div>
+    </section>
+
+    <section class="section" id="scholarships">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">EXPLORE OPPORTUNITIES</p>
+          <h2>UG Scholarships</h2>
+          <p class="muted">A starter list of real scholarship schemes for undergraduate students.</p>
+        </div>
+        <span class="count" id="resultCount">8 scholarships</span>
+      </div>
+
+      <div class="search-area">
+        <input type="text" id="searchInput" placeholder="Search scholarship by name...">
+        <select id="categoryFilter">
+          <option value="all">All scholarships</option>
+          <option value="merit">Merit based</option>
+          <option value="need">Need based</option>
+          <option value="special">Special category</option>
+        </select>
+      </div>
+
+      <div class="scholarship-grid" id="scholarshipList"></div>
+      <p class="empty-message" id="emptyMessage">No scholarships found. Try another search.</p>
+      <p class="notice">Note: This is an educational project. Eligibility, application dates and availability can change. Always check the official website before applying.</p>
+    </section>
+
+    <section class="about" id="about">
+      <div>
+        <p class="eyebrow">ABOUT SCHOLARTRACK</p>
+        <h2>Making scholarship discovery simpler.</h2>
+      </div>
+      <p>ScholarTrack is a student project that brings selected undergraduate scholarship names into one place. It helps students discover schemes and visit their official pages for complete information.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 ScholarTrack · Web Programming Project</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
